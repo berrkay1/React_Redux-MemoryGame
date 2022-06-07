@@ -1,18 +1,21 @@
-import React from 'react'
-import {useSelector} from 'react-redux'
+import React, { useEffect } from 'react'
+import {useSelector,useDispatch} from 'react-redux'
 import Cart from './Cart';
+import {chanceVisible,randomItem} from '../redux/gameSlice'
 
 function Carts() {
     const items = useSelector(state => state.game.items);
+    const dispatch = useDispatch();
+
 
     const handleCart = (id) => {
-        
-       const item = items.filter(itm =>itm.id ===id)
-        
-       
-       
-        
+      
+        dispatch(chanceVisible(id))
     }
+
+    useEffect(()=>{
+        dispatch(randomItem())
+    },[dispatch])
     
   return (
     <div className='container'>

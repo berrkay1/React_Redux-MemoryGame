@@ -13,12 +13,13 @@ body{
   align-items: center;
 }
 .App{
+  margin-top: -40px;
   height: 100%;
   width: 100%;
 }
 h1{
   text-align: center;
-  margin-bottom: 1em;
+  margin-bottom: 10px;
 }
 .container{
   height:100%;
@@ -38,8 +39,8 @@ h1{
   transform: rotateY(180deg);
   animation: 2s hideCard linear;
   transition: transform 0.5s;
-  width: 85px;
-  height: 85px;
+  width: 90px;
+  height: 90px;
 }
 @keyframes hideCard{
   0%, 70%{
