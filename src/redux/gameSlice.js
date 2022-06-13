@@ -20,9 +20,9 @@ const gameSlice = createSlice({
             state.items.sort(()=> Math.random()-0.5)
         },
         cartMatch: (state,action)=>{
-            let cart1 = action.payload;
+            let cartName = action.payload;
            const newCart =  state.items.map(cart2 => {
-                if(cart1 === cart2.name){
+                if(cartName === cart2.name){
                     return {...cart2,matched:true}
                 }else{
                     return cart2
